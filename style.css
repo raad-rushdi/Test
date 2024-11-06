@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: Serif;
+    font-family: 'Courier New', Courier, monospace;
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
@@ -36,6 +36,7 @@ header{
 }
 
 footer{
+    margin-top: 50px;
     border-top: solid 1px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px; 
@@ -51,7 +52,7 @@ header, footer{
     transition: 1s ease;
 }
 
-header h1{
+header h2{
     color: #d11c1cc4;
 }
 
@@ -60,7 +61,7 @@ main{
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: minmax(100px, auto) repeat(1, 50px) repeat(1, 50px) minmax(100px, 430px)minmax(100px, 430px) ;
     gap: 100px;
-    padding: 30px;
+    padding: 30px 0;
 }
 
 .nav_bar, .right_nav{
@@ -68,7 +69,6 @@ main{
     display: flex;
     justify-content: space-around;
     color: rgb(224, 224, 224);
-    font-size: 30px;
     animation-name: welcom_nav_move;
     animation-duration: 1s;
 }
@@ -90,6 +90,7 @@ main{
     font-size: 100%;
     animation-name: welcom_move;
     animation-duration: 1s;
+    padding: 30px;
 }
 
 @keyframes welcom_move{
@@ -107,7 +108,7 @@ main{
 .welcom span{
     display: block;
     padding: 70px 0 ;
-    font-size: 250%;
+    font-size: 50px;
     color: rgba(209, 28, 28, 0.767);
     animation-name: welcom_span_move;
     animation-duration: 1s;
@@ -134,7 +135,7 @@ main{
 /* From Uiverse.io by BillNarkah */ 
 .light-button button.bt {
     position: relative;
-    height: 150px;
+    height: 250px;
     display: flex;
     align-items: flex-end;
     outline: none;
@@ -150,7 +151,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 80px;
     width: 100px;
     background-color: #0a0a0a8a;
     border-radius: 5px;
@@ -221,8 +222,7 @@ main{
     border-style:groove;
     height: 100%;
     border-radius: 50px;
-    padding: 10px 20px;
-    font-size: 20px;
+    padding: 10px 20px 0;
 }
 
 .qut_feet h1, .sudanes_stuff h1{
@@ -245,8 +245,8 @@ main{
 .image_content img{
     width: 100%;
     animation-name: image_content_move;
-    animation-duration: 15s;
-    animation-delay: 2s;
+    animation-duration: 30s;
+    animation-delay: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -310,62 +310,7 @@ main{
     
 }
 
-@media (min-width:375px) and (max-width:424px){
-
-    header{
-        font-size: 20px;
-    }
-
-    .welcom{
-        font-size: 120%;
-    }
-
-    .nav_bar a, .right_nav{
-        font-size: 30px;
-        padding-bottom: 20px;
-    }
-
-    .qut_feet h1, .sudanes_stuff h1{
-        font-size: 30px;
-    }
-
-    footer{
-        font-size: 18px;
-    }
-
-}
-
-@media (min-width:425px) and (max-width:599px){
-
-    header{
-        font-size: 25px;
-    }
-
-    .welcom{
-        font-size: 140%;
-    }
-
-    .nav_bar a, .right_nav{
-        font-size: 35px;
-        padding-bottom: 25px;
-    }
-
-    .qut_feet h1, .sudanes_stuff h1{
-        font-size: 35px;
-    }
-
-    footer{
-        margin-top: 30px;
-        font-size: 22px;
-    }
-
-}
-
 @media (min-width:600px) and (max-width:1023px) {
-
-    header{
-        font-size: 30px;
-    }
 
     main{
         grid-template-columns: repeat(1, 1fr) repeat(1, 50px);
@@ -375,7 +320,6 @@ main{
 
     .welcom{
         grid-column: 1/1;
-        font-size: 130%;
     }
 
     .nav_bar{
@@ -383,13 +327,10 @@ main{
     }
 
     .nav_bar a{
-        font-size: 35px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
         height: 60%;
-    }
-
-    .qut_feet h1, .sudanes_stuff h1{
-        font-size: 40px;
-        margin: 50px 0;
     }
 
     .qut_feet{
@@ -404,44 +345,34 @@ main{
         grid-column: 2/2;
         grid-row: 1/1;
         flex-direction: column;
-    }
-
-    footer{
-        font-size: 35px;
     }
     
 }
 
 @media (min-width:1024px) and (max-width:2560px){
 
-    header{
-        font-size: 40px;
-    }
-
     main{
         grid-template-columns: repeat(1, 1fr) repeat(1, 50px);
-        grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, 1300px) minmax(100px, 1300px);
+        grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, 600px) minmax(100px, 600px);
         gap: 10px;
     }
 
     .welcom{
         grid-column: 1/1;
-        font-size: 180%;
-        margin-top: 30px;
     }
 
     .nav_bar{
         grid-column: 1/4;
-        margin: 50px 0;
     }
 
     .nav_bar a{
-        font-size:50px;
+        display: flex;
+        align-items: center;
         height: 70%;
+        padding: 0 20px;
     }
 
     .qut_feet h1, .sudanes_stuff h1{
-        font-size: 60px;
         margin: 50px 0;
     }
 
@@ -457,11 +388,71 @@ main{
         grid-column: 2/2;
         grid-row: 1/1;
         flex-direction: column;
-        font-size: 40px;
     }
 
-    footer{
-        font-size: 50px;
+    .image_content img{
+        width: 30%;
+        padding: 0 40px;
+    }
+
+    @keyframes image_content_move{
+
+        0%{
+            translate: 0 0;
+            width: 30%;
+        }
+    
+        10%{
+            translate: -80% 0;
+            width: 40%;
+        }
+    
+        20%{
+            translate: -100% 0;
+            width: 30%;
+        }
+    
+        30%{
+            translate: -180% 0;
+            width: 40%;
+        }
+    
+        40%{
+            translate: -200% 0;
+            width: 30%;
+        }
+    
+        50%{
+            translate: -280% 0;
+            width: 40%;
+        }
+    
+        60%{
+            translate: -300% 0;
+            width: 30%;
+        }
+    
+        70%{
+            translate: -380% 0;
+            width: 40%;
+        }
+    
+        80%{
+            translate: -400% 0;
+            width: 30%;
+        }
+    
+        90%{
+            translate: -480% 0;
+            width: 40%;
+        }
+    
+        100%{
+            translate: -500% 0;
+            width: 30%;
+        }
+    
+        
     }
 
 }
